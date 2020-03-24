@@ -1,9 +1,11 @@
-package com.iflippie.level3__example
+package com.iflippie.level3__example.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.iflippie.level3__example.R
+import com.iflippie.level3__example.model.Reminder
 import kotlinx.android.synthetic.main.item_reminder.view.*
 
 class ReminderAdapter(private val reminders: List<Reminder>) : RecyclerView.Adapter<ReminderAdapter.ViewHolder>() {

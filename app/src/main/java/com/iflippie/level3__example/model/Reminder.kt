@@ -1,4 +1,4 @@
-package com.iflippie.level3__example
+package com.iflippie.level3__example.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -1,10 +1,9 @@
-package com.iflippie.level3__example
+package com.iflippie.level3__example.ui
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -12,6 +11,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.iflippie.level3__example.R
+import com.iflippie.level3__example.model.Reminder
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -21,7 +22,8 @@ const val ADD_REMINDER_REQUEST_CODE = 100
 class MainActivity : AppCompatActivity() {
 
     private val reminders = arrayListOf<Reminder>()
-    private val reminderAdapter = ReminderAdapter(reminders)
+    private val reminderAdapter =
+        ReminderAdapter(reminders)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,8 +31,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        reminders.add(Reminder("ok"))
-        reminders.add(Reminder("boomer"))
+        //test adds
+//        reminders.add(Reminder("ok"))
+//        reminders.add(Reminder("boomer"))
 
         initViews()
         fab.setOnClickListener {
@@ -44,7 +47,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun startAddActivity() {
         val intent = Intent(this, AddActivity::class.java)
-        startActivityForResult(intent, ADD_REMINDER_REQUEST_CODE)
+        startActivityForResult(intent,
+            ADD_REMINDER_REQUEST_CODE
+        )
     }
 
     // addReminder method
